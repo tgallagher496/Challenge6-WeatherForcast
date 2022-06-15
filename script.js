@@ -94,7 +94,7 @@ function getHistory(){
           var iconImage = document.createElement("img");
           iconImage.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[1].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[1].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Monday").innerHTML = moment()
@@ -111,7 +111,7 @@ function getHistory(){
           var iconImage2 = document.createElement("img");
           iconImage2.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[2].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[2].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Tuesday").innerHTML = moment()
@@ -128,7 +128,7 @@ function getHistory(){
           var iconImage3 = document.createElement("img");
           iconImage3.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[3].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[3].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Wednesday").innerHTML = moment()
@@ -145,7 +145,7 @@ function getHistory(){
           var iconImage4 = document.createElement("img");
           iconImage4.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[4].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[4].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Thursday").innerHTML = moment()
@@ -162,7 +162,7 @@ function getHistory(){
           var iconImage5 = document.createElement("img");
           iconImage5.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[5].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[5].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Friday").innerHTML = moment()
@@ -179,7 +179,7 @@ function getHistory(){
       var iconImage = document.createElement("img");
       iconImage.setAttribute(
         "src",
-        `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       );
       document.getElementById("City").innerHTML =
         data.name + " " + moment().format("L");
@@ -223,7 +223,7 @@ function getInput(event) {
   }
 
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=imperial&appid=" +
     APIKey;
@@ -234,7 +234,7 @@ function getInput(event) {
     })
     .then(function (data) {
       console.log(data);
-      var fiveDayURL = `http://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${APIKey}&units=imperial`;
+      var fiveDayURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${APIKey}&units=imperial`;
       fetch(fiveDayURL)
         .then(function (response) {
           return response.json();
@@ -254,7 +254,7 @@ function getInput(event) {
           var iconImage = document.createElement("img");
           iconImage.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[1].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[1].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Monday").innerHTML = moment()
@@ -271,7 +271,7 @@ function getInput(event) {
           var iconImage2 = document.createElement("img");
           iconImage2.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[2].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[2].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Tuesday").innerHTML = moment()
@@ -288,7 +288,7 @@ function getInput(event) {
           var iconImage3 = document.createElement("img");
           iconImage3.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[3].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[3].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Wednesday").innerHTML = moment()
@@ -305,7 +305,7 @@ function getInput(event) {
           var iconImage4 = document.createElement("img");
           iconImage4.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[4].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[4].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Thursday").innerHTML = moment()
@@ -322,7 +322,7 @@ function getInput(event) {
           var iconImage5 = document.createElement("img");
           iconImage5.setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${fiveData.daily[5].weather[0].icon}@2x.png`
+            `https://openweathermap.org/img/wn/${fiveData.daily[5].weather[0].icon}@2x.png`
           );
 
           document.getElementById("Friday").innerHTML = moment()
@@ -339,7 +339,7 @@ function getInput(event) {
       var iconImage = document.createElement("img");
       iconImage.setAttribute(
         "src",
-        `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       );
       document.getElementById("City").innerHTML =
         data.name + " " + moment().format("L");
