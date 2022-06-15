@@ -63,7 +63,7 @@ function getHistory(){
   }
 
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=imperial&appid=" +
     APIKey;
@@ -74,7 +74,7 @@ function getHistory(){
     })
     .then(function (data) {
       console.log(data);
-      var fiveDayURL = `http://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${APIKey}&units=imperial`;
+      var fiveDayURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${APIKey}&units=imperial`;
       fetch(fiveDayURL)
         .then(function (response) {
           return response.json();
